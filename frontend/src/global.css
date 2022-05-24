@@ -1,0 +1,575 @@
+/*==================== GOOGLE FONTS ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+  /* Change favorite color */
+  --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+ 
+  /* HSL color mode */
+  --first-color: hsl(var(--hue-color), 4%, 11%);
+  --first-color-alt: hsl(var(--hue-color), 2%, 18%);
+
+  --title-color: hsl(var(--hue-color), 70%, 95%);
+  --title-color-dark: hsl(var(--hue-color), 4%, 11%);
+  
+  --text-color: hsl(var(--hue-color), 75%, 99%);
+  --text-color-light: hsl(var(--hue-color), 8%, 65%);
+
+  --input-color: hsl(var(--hue-color), 70%, 96%);
+
+  --body-color: hsl(197, 17%, 92%);
+
+  --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
+  --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
+
+  --container-color: #fff;
+
+  /*========== Font and typography ==========*/
+  --body-font: "Poppins", sans-serif !important;
+
+  /* ========== FONT SIZE ======== */
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --biger-font-size: 2rem;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  --dashboard-title-font-size:1.3rem;
+
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+
+/*==================== BASE CSS ====================*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0 0 var(--header-height) 0;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  position: relative;
+  overflow-x:hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 550;
+}
+
+form{
+  max-width: 550px;
+  margin: auto;
+}
+
+body,input,textarea,button,select,option{
+  font-family: var(--body-font);
+}
+
+/* active link  */
+.active__link {
+  color: var(--first-color) !important;
+}
+
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+section {
+  padding: 2rem 0 4rem;
+}
+.section__title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: -10px;
+}
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-2);
+}
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.ml-1{
+  margin-left: 8px;
+}
+
+
+/*==================== LAYOUT ====================*/
+.container {
+  max-width: 768px;
+  padding-left: var(--mb-1-5);
+  padding-right: var(--mb-1-5);
+}
+.profile .container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 0.9rem 0;
+  z-index: var(--z-fixed);
+  background-color: var(--body-color);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.11);
+}
+
+
+/* ========== OLD CSS ========== */
+.box{
+  background:white;
+  width:300px;
+  height: 250px;
+  border-radius:6px;
+  margin: 0 auto 0 auto;
+  padding: 30px 0px 70px 0px;
+  border: #404c54 4px solid; 
+  margin-top: 120px;
+
+}
+
+.email{
+  background:#ecf0f1;
+  border: #ccc 1px solid;
+  border-bottom: #ccc 2px solid;
+  padding: 8px;
+  width:250px;
+  color:#AAAAAA;
+  margin-top:10px;
+  font-size:1em;
+  border-radius:4px;
+}
+
+.password{
+  border-radius:4px;
+  background:#ecf0f1;
+  border: #ccc 1px solid;
+  padding: 8px;
+  width:250px;
+  font-size:1em;
+}
+
+.btn{
+  background: #2980b9 ;
+  width:125px;
+  padding-top:5px;
+  padding-bottom:5px;
+  color:white;
+  border-radius:4px;
+  border: #27ae60 1px solid;
+  
+  margin-top:20px;
+  margin-bottom:20px;
+  float:left;
+  margin-left:80px;
+  font-weight:800;
+  font-size:0.8em;
+}
+
+.btn:hover{
+  background:#2CC06B; 
+}
+
+
+.body-creategroup{
+  background: black;
+  font-family: "work sans";
+  font-size: 100%;
+}
+
+
+.loginform{
+  max-width: 500px;
+  min-width: 300px;
+  max-height: 700px;
+  width: 30%;
+  height: 60%;
+  margin: 100px auto;
+  background-color: #FFFFFF;
+  border-radius: 25px;
+}
+
+.headerTitle{
+  text-align: center;
+  font-family: 'open sans', sans-serif;
+  padding: 1rem 0;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.row{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  max-width: 100%;
+  
+}
+
+.row input{
+  width: 80%;
+  box-sizing: border-box;
+	border: none;
+  font-size: 1.3rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1rem;
+  box-shadow: inset 0px -3px 0px 0px rgba(187,187,187,0.2);
+  transition: box-shadow 0.2s ease-in;
+}
+
+.row input:focus{
+   box-shadow: inset 0px -3px 0px 0px rgba(34,193,195,0.7);
+   outline: none;
+}
+
+.row input::-webkit-input-placeholder{
+  opacity: 1;
+  transition: opacity 0.25s ease-out;
+}
+
+.row input:hover::-webkit-input-placeholder,
+.row input:focus::-webkit-input-placeholder{
+  opacity: 0;
+}
+
+.row label{
+  align-self: start;
+  padding-left: 4.5rem;
+  padding-bottom: 0.5rem;
+  color: rgba(187,187,187,0.9);
+}
+
+.row button{
+  border-radius: 25px;
+  width: 80%;
+  height: 40px;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 700;
+  background: rgb(34,193,195);
+  background: linear-gradient(90deg, black 0%,     grey 100%);
+  border: 0px;
+  cursor: pointer;
+  transition: opacity 0.25s ease-out;
+}
+
+.row button:hover{
+  opacity: 0.8;
+}
+
+
+
+/*==================== CUSTOM BUTTONS ====================*/
+.button {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 0.5rem;
+}
+.button:hover {
+  background-color: var(--first-color-alt);
+}
+.button__icon {
+  font-size: 1.25rem;
+  margin-left: var(--mb-0-5);
+  transition: 0.3s;
+  display: flex;
+}
+
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+}
+.button--white {
+  background-color: white !important;
+  color: var(--first-color);
+}
+.button--small {
+  padding: 0.75rem 1rem;
+}
+
+.button--link {
+  padding: 0;
+  background-color: transparent;
+  color: var(--first-color);
+}
+.button--link:hover {
+  background-color: transparent;
+  color: var(--first-color-alt);
+}
+
+.button--outline{
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid white;
+  transition: all 0.3s ease-out;
+  padding: .7rem 1rem;
+}
+
+
+
+/*========== CUSTOM SCROLL BAR ==========*/
+body::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+  border-radius: 0.5rem;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  border-radius: 0.5rem;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-color-light);
+}
+
+
+
+/*==================== MEDIA QUERIES ====================*/
+/* ---- FOR SMALL DEVICES ---- */
+@media screen and (max-width: 350px) {
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+
+  .nav__menu {
+    padding: 2rem 0.25rem 4rem;
+  }
+  .nav__list {
+    column-gap: 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .nav__menu {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem 4rem;
+    box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 1.5rem 1.5rem 0 0;
+    transition: 0.3s;
+    background-color: var(--body-color);
+  }
+}
+
+
+/* ---- FOR MEDIUM DEVICES ---- */
+@media screen and (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  body {
+    margin: 0;
+  }
+  .section {
+    padding: 6rem 0 2rem;
+  }
+  .section__subtitle {
+    margin-bottom: 3rem;
+  }
+  .header {
+    top: 0;
+    bottom: initial;
+  }
+
+  .header,
+  .main,
+  .footer__container {
+    padding: 0.8rem 0.8rem 0.8rem 0.8rem;
+  }
+
+  /* ---- NAV ---- */
+  .nav {
+    column-gap: 1rem;
+    height: calc(var(--header-height) + 11.125rem);
+  }
+  .nav__icon,
+  .nav__close,
+  .nav__toggle {
+    display: none !important;
+  }
+  .nav__list {
+    display: flex;
+    column-gap: 2.5rem;
+    margin-top: 7px;
+  }
+  .nav__menu {
+    margin-left: auto;
+  }
+  .nav__logo {
+    width: 85px !important;
+  }
+
+}
+
+
+/* ---- FOR LARGE DEVICES ---- */
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 980px;
+  }
+}
+
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --biger-font-size: 4rem;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1.1rem;
+    --small-font-size: 1rem;
+    --smaller-font-size: 0.813rem;
+
+    --dashboard-title-font-size:2rem;
+  }
+}
+
+
+
+/* ============= ALL COMPONENT RESPONSIVE CSS ================== */
+@media screen and (max-width: 768px) {
+  /* == DASHBOARD == */
+  .sidebar-nav {
+    margin-top: 0 !important;
+  }
+  .dashboard {
+    display: block !important;
+  }
+  .sidebar {
+    width: auto !important;
+  }
+  .sidebar-nav ul li {
+    width: fit-content;
+    margin: 5px !important;
+    height: fit-content;
+  }
+  .sidebar-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .signout {
+    margin-top: 5px !important;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  /* -- DASHBOARD -- */
+  .sidebar-nav ul li {
+    width: 100% !important;
+  }
+  .sidebar{
+    position: absolute;
+    background-color: var(--body-color);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform: translateY(-31rem);
+    transition: .4s;
+  }
+  .dashboard .shutter-toggle{
+    transform: translateY(0rem) !important;
+  }
+  .shutter-btn{
+    display: block !important;
+  }
+  .sidebar-nav {
+    margin-top: 2rem !important;
+  }
+
+
+  input[type="button"], input[type="submit"], input[type="reset"]{
+    width: fit-content;
+    padding: 5px 10px !important;
+  }
+  .wrapper .container{
+    margin: 0 !important;
+  }
+  .wrapper{
+    padding: 0 !important;
+  }
+
+
+  .single-check > label{
+    text-align: left;
+  }
+
+  /* -- HOME -- */
+  .cards .container {
+    padding-left: 0 !important;
+  }
+}
+.exam-item {
+  padding: 10px;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+}
+.exam-item:hover {
+  text-decoration: underline;
+}

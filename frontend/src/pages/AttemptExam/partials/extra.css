@@ -1,0 +1,27 @@
+.add-option {
+    max-width: 25px;
+    max-height: 25px;
+    cursor: pointer;
+}
+.list-qs {
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    align-items: flex-start;
+    color: black;
+    width: 200px;
+}
+.list-qs li {
+    border: 1px solid grey;
+    width: 180px;
+    padding: 5px;
+    margin: 5px;
+    background: white;
+    cursor: pointer;
+}
+.qs-text {
+    color: black;
+}
+.warn {
+    color: black;
+}

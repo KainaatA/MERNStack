@@ -1,0 +1,37 @@
+.sidebar {
+  width: fit-content;
+  padding: 15px;
+  box-shadow: 0 0px 12px 1px #00000024;
+  height: 100vh;
+  overflow-y: auto;
+}
+.sidebar-nav {
+  margin-top: 5rem;
+}
+.sidebar-nav > ul > li a {
+  font-size: var(--small-font-size);
+}
+.sidebar-nav > ul li {
+  text-align: center;
+  padding: 0;
+  padding: 10px 15px;
+  background: var(--first-color);
+  margin: 10px 0;
+  border-radius: 7px;
+  cursor: pointer;
+  line-height: 1;
+}
+.sidebar-nav > ul li:hover {
+  background: var(--first-color-alt);
+}
+.signout {
+  background-color: rgb(34, 34, 34) !important;
+  margin-top: 2rem !important;
+}
+
+@media screen and (min-width: 945px) {
+  .sidebar {
+    position: fixed;
+    min-height: 100vh;
+  }
+}

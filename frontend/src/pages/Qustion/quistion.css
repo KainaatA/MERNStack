@@ -1,0 +1,36 @@
+.quistion {
+  background: var(--body-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.quistion-card-btns {
+  display: grid;
+}
+.quistion-card-btns > a {
+  width: fit-content;
+  margin: auto;
+  margin-top: 7px !important;
+}
+
+.quistion-card-text {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+  background: #393939;
+  color: #fdfdfd;
+  border-radius: 7px;
+  margin-top: 19px;
+  max-width: 80%;
+  text-align: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-top: 11px;
+}

@@ -1,0 +1,288 @@
+/* ============= DASHBOARD =============== */
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background: white;
+}
+.dashboard section{
+  padding: 0 !important;
+}
+.dashboard .section-title{
+  margin-top: 35px;
+}
+
+.dashboard-container {
+  flex: auto;
+  padding: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(43, 42, 42);
+}
+.shutter-btn {
+  position: absolute;
+  top: 7px;
+  left: 11px;
+  background: var(--first-color);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* ================= RE-USEABLE CLASS ============== */
+.submit-button {
+  background: var(--first-color);
+  border: none;
+  outline: none;
+  padding: 9px 20px;
+  font-size: var(--small-font-size);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.submit-button:hover {
+  opacity: .9;
+}
+.section-subtitle {
+  font-weight: 500;
+  font-size: var(--normal-font-size);
+  color: rgb(37, 37, 37);
+  margin-bottom: 17px;
+}
+.section-title {
+  font-size: var(--dashboard-title-font-size);
+  font-weight: 550;
+}
+
+
+/* ============= CREATE NEW GROUP =========== */
+.new-group-username {
+  display: flex;
+}
+.new-group input {
+  width: 100% !important;
+}
+.exam-link {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+}
+.exam-link a {
+  padding: 5px;
+  background: var(--input-color);
+  margin: 3px 0;
+  border-radius: 6px;
+  color: var(--first-color);
+}
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* ============== CREATE AN EXAM ============== */
+.step {
+  font-size: var(--normal-font-size);
+  margin-bottom: 12px;
+}
+.create-exam input,
+.create-exam textarea {
+  width: 100% !important;
+  margin: 0 !important;
+}
+.step-select-btns > option {
+  background: var(--input-color);
+  cursor: pointer;
+}
+.step-select-btns {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 11px 10px;
+  border-radius: 5px;
+  font-size: var(--small-font-size);
+  background: var(--input-color);
+  cursor: pointer;
+}
+
+.step-head {
+  display: flex;
+  width: 100%;
+  padding: 8px 11px;
+  background: var(--first-color);
+  align-items: center;
+  color: #d9d9d9;
+  border-radius: 6px;
+  font-size: var(--small-font-size);
+}
+.step-toggle-btn {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  cursor: pointer;
+  padding: 5px;
+  width: whi;
+  border: 1px solid #d5cece;
+  border-radius: 50%;
+}
+.step-toggle-btn svg {
+  width: 17px;
+  height: 17px;
+}
+
+.step-checks {
+  background: var(--input-color);
+  padding: 8px 6px;
+  border-radius: 8px;
+}
+.single-check {
+  display: flex;
+  margin: 6px;
+}
+.single-check > label {
+  font-size: var(--small-font-size);
+  margin-left: 9px;
+}
+.step-checks input {
+  width: 15px !important;
+  cursor: pointer;
+}
+
+
+/* ================== TAKE AN EXAM ================== */
+.upload-img input,.upload-audio input {
+  border: 1px solid rgb(156, 154, 154);
+  padding: 0.3rem;
+  width: 96%;
+  color: rgb(119, 119, 119);
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.file-wrapper {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.file-wrapper input {
+  cursor: pointer;
+  font-size: 100px;
+  height: 100%;
+  filter: alpha(opacity=1);
+  opacity: 0.01;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9;
+}
+
+.left {
+  width: 13rem;
+  height: 8rem;
+  margin: auto;
+  margin-bottom: .3rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.upload-audio .left {
+  height: fit-content;
+}
+
+.upload-img .submit-button,.upload-audio .submit-button{
+  background: transparent !important;
+  color: #484848;
+  border: 1px solid #484848;
+}
+.upload-img,.upload-audio  {
+  width: fit-content;
+  padding: 11px;
+  border: 2px dashed #0000002b;
+  margin: auto;
+  border-radius: 14px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+
+/* ================== TAKE AN EXAM ================== */
+.take-exam form,.your-classes form {
+  text-align: justify;
+  max-width: 550px;
+  padding: 15px;
+  border: 1px solid #00000075;
+  border-radius: 7px;
+  overflow-y: auto;
+  font-size: var(--small-font-size);
+  min-height: fit-content;
+  max-height: 72vh;
+}
+.upcoming-box {
+  padding: 10px 9px;
+  border: 1px solid #0000004f;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.upcoming-box button {
+  margin-top: 10px;
+}
+
+
+
+/* ================= ATTENDANCE ================ */
+#students {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: start;
+}
+
+#students td,
+#students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#students tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+#students tr:hover {
+  background-color: #ddd;
+}
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--first-color);
+  color: white;
+}
+#students tr {
+  font-size: var(--small-font-size);
+}
+
+
+
+/* ================ EDIT PROFILE ========== */
+.edit-profile input{
+  margin-left: 0 !important;
+  width: 100% !important;
+}
+.edit-profile .step{
+  margin-top: 10px;
+}
+.edit-profile .step input{
+  margin: 0 !important;
+  margin-bottom: 4px !important;
+}
