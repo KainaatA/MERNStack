@@ -10,7 +10,7 @@ app.use(cors());
 
 // const DB = process.env.DATABASE.replace('<PASSWORD>',process.env.DATABASE_PASSWORD);
 const DB =
-  "mongodb+srv://hamzaali:%23hamzaOo0%2312@cluster0.rkpc2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "DB Link";
 mongoose
   .connect(DB, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((con) => {
